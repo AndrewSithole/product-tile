@@ -1,0 +1,138 @@
+/**/
+
+html, body{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.bg-refurbed-50{
+  background-color:#F9F9FC;
+}
+.product-grid{
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-3 py-5;
+}
+
+.product-card{
+  @apply flex flex-col p-8;
+  background: #FFFFFF;
+  box-shadow: 0 8px 17px rgba(47, 48, 97, 0.12);
+  border-radius: 13px;
+  position: relative;
+  &:hover{
+    box-shadow: 0 8px 17px rgba(47, 48, 97, 0.3);
+    cursor: pointer;
+  }
+}
+.product-flags{
+  @apply flex flex-row justify-items-end -m-8;
+  position: relative;
+  top: -11px;
+}
+.ribbon{
+  position: relative;
+  left: -15px;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 34px;
+  background: #4B5492;
+  box-shadow: 0 0 2px rgba(75, 84, 146, 0.14), 0 2px 2px rgba(75, 84, 146, 0.12), 0 1px 3px rgba(75, 84, 146, 0.2);
+  border-radius: 3px 3px 3px 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+.ribbon:after{
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 15px solid #2F3061;
+  border-left: 15px solid transparent;
+  left: 0;
+  bottom: -15px;
+}
+.discount{
+  position: relative;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background: #17A398;
+  right: -11px;
+  font-size: 1.8rem;
+  line-height: 150%;
+  text-align: center;
+  color: #FFFFFF;
+  //flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product-info{
+  @apply flex flex-row md:flex-col  gap-8;
+}
+.product-description{
+  @apply flex flex-col;
+  text-align:center;
+}
+.product-image{
+  @apply h-32 md:h-72 flex justify-center;
+  & img{
+    object-fit: contain;
+  }
+}
+.product-name{
+  @apply w-80 md:w-auto;
+  flex-grow: 1;
+  font-size: 1.6rem;
+  line-height: 120%;
+  text-align: center;
+  color: #535760;
+  overflow-wrap: break-spaces;
+}
+.color-picker {
+  @apply hidden justify-center gap-2  md:flex py-5;
+}
+.color-circle{
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  /*margin: auto 2px;*/
+  &:hover{
+    box-shadow: 0 2px 4px rgba(125, 128, 140, 0.14), 0 3px 4px rgba(125, 128, 140, 0.12), 0 1px 5px rgba(125, 128, 140, 0.2);
+  }
+}
+
+.space-grey{
+  background: #555251;
+}
+.silver{
+  background: #ECEAE3;
+}
+.red{
+  background: #912C34;
+}
+.gold{
+  background: #FAD9BD;
+}
+.price {
+  font-size: 3.2rem;
+  line-height: 100%;
+  color: #17A398;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  & .currency{
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+}
